@@ -1,0 +1,7 @@
+llm_provider: "ollama"          # 可选: "openai", "deepseek", "aws"
+model_name: "llama3"
+temperature: 0.0
+
+embedding_options: ["local", "openai"]
+embedding_model_local: "all-mpnet-base-v2"
+embedding_model_openai: "text-embedding-3-small"

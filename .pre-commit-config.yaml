@@ -1,0 +1,35 @@
+repos:
+  - repo: https://github.com/PyCQA/autoflake
+    rev: v2.3.1
+    hooks:
+      - id: autoflake
+        args:
+          - --in-place
+          - --remove-all-unused-imports
+          - --remove-unused-variables
+          - --expand-star-imports
+        language_version: python3.11
+
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        args: ["--profile", "black"]
+        language_version: python3.11
+
+  - repo: https://github.com/psf/black
+    rev: 24.8.0
+    hooks:
+      - id: black
+        language_version: python3.11
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.1.1
+    hooks:
+      - id: flake8
+        additional_dependencies:
+          - flake8-bugbear
+          - flake8-comprehensions
+          - flake8-import-order
+        language_version: python3.11
+        args: ["--import-order-style=google", "--application-import-names=app", "--ignore=I100,I201,I202,E501,W503,B008,I101,E203"]

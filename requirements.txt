@@ -1,0 +1,11 @@
+streamlit
+langchain
+langchain-openai
+langchain-ollama
+langchain-community
+faiss-cpu
+tiktoken
+pyyaml
+sentence-transformers
+boto3
+ollama
